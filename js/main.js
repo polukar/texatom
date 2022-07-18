@@ -170,9 +170,9 @@ __webpack_require__.r(__webpack_exports__);
 var projectSlidersParent = document.querySelectorAll('.tab');
 
 if (projectSlidersParent) {
-  var sliderNumberActive = document.querySelector('.slider-active');
-  var sliderNumberAll = document.querySelector('.slider-all');
   projectSlidersParent.forEach(function (elem) {
+    var sliderNumberActive = elem.querySelector('.slider-active');
+    var sliderNumberAll = elem.querySelector('.slider-all');
     var slider = elem.querySelector('.project-slider');
     var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
@@ -215,11 +215,8 @@ var mainSlider = document.querySelector('.main__slider');
 
 if (mainSlider) {
   var mainNav = document.querySelector('.slider-nav--main');
-
-  var _sliderNumberActive = mainNav.querySelector('.slider-active');
-
-  var _sliderNumberAll = mainNav.querySelector('.slider-all');
-
+  var sliderNumberActive = mainNav.querySelector('.slider-active');
+  var sliderNumberAll = mainNav.querySelector('.slider-all');
   var mainSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.main__slider', {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
     loop: false,
@@ -229,16 +226,16 @@ if (mainSlider) {
       slideChange: function slideChange() {
         var index_currentSlide = mainSwiper.realIndex;
 
-        if (_sliderNumberActive) {
-          _sliderNumberActive.innerHTML = "";
-          _sliderNumberActive.innerHTML = "".concat(index_currentSlide + 1);
+        if (sliderNumberActive) {
+          sliderNumberActive.innerHTML = "";
+          sliderNumberActive.innerHTML = "".concat(index_currentSlide + 1);
         }
       },
       init: function init() {
-        if (_sliderNumberAll) {
+        if (sliderNumberAll) {
           var allSlides = document.querySelectorAll('.main__slider .swiper-slide');
-          _sliderNumberAll.innerHTML = "";
-          _sliderNumberAll.innerHTML = " / ".concat(allSlides.length);
+          sliderNumberAll.innerHTML = "";
+          sliderNumberAll.innerHTML = " / ".concat(allSlides.length);
         }
       }
     }
@@ -261,9 +258,9 @@ var mainActivitesSlider = document.querySelector('.main-activites__slider');
 if (mainActivitesSlider) {
   var activitesNav = document.querySelector('.slider-nav--activites');
 
-  var _sliderNumberActive2 = activitesNav.querySelector('.slider-active');
+  var _sliderNumberActive = activitesNav.querySelector('.slider-active');
 
-  var _sliderNumberAll2 = activitesNav.querySelector('.slider-all');
+  var _sliderNumberAll = activitesNav.querySelector('.slider-all');
 
   var mainActivitesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.main-activites__slider', {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
@@ -275,16 +272,16 @@ if (mainActivitesSlider) {
       slideChange: function slideChange() {
         var index_currentSlide = mainActivitesSwiper.realIndex;
 
-        if (_sliderNumberActive2) {
-          _sliderNumberActive2.innerHTML = "";
-          _sliderNumberActive2.innerHTML = "".concat(index_currentSlide + 1);
+        if (_sliderNumberActive) {
+          _sliderNumberActive.innerHTML = "";
+          _sliderNumberActive.innerHTML = "".concat(index_currentSlide + 1);
         }
       },
       init: function init() {
-        if (_sliderNumberAll2) {
+        if (_sliderNumberAll) {
           var allSlides = mainActivitesSlider.querySelectorAll('.swiper-slide');
-          _sliderNumberAll2.innerHTML = "";
-          _sliderNumberAll2.innerHTML = " / ".concat(allSlides.length / 3);
+          _sliderNumberAll.innerHTML = "";
+          _sliderNumberAll.innerHTML = " / ".concat(allSlides.length / 3);
         }
       }
     }
