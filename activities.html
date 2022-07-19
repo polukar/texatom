@@ -30,7 +30,10 @@
     <div class="header"> 
       <div class="container header__wrap">
         <div class="haeder__left">
-          <div class="header__burger"></div><a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
+          <div class="header__burger"></div><a class="header__logo" href="#">
+            <picture> 
+              <source media="(max-width: 1200px)" srcset="./img/logo-mobile.svg"><img src="./img/logo.svg" alt="">
+            </picture></a>
         </div>
         <div class="header__right"> 
           <nav class="nav"><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></nav>
@@ -51,7 +54,9 @@
         </div>
       </div>
     </div>
-        <div class="mobile-nav"> <a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></div>
+        <div class="mobile-nav"> 
+          <div class="mobile-nav__close"> <img src="./img/close.svg" alt=""></div><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a>
+        </div>
     <main class="inner"> 
       <div class="container">
             <div class="scrumbs"> <a class="scrumbs__link" href="#">Главная  </a><a class="scrumbs__link" href="#">Пункт 2  </a><a class="scrumbs__link" href="#">Пункт 3  </a></div>
@@ -67,61 +72,87 @@
         <h3 class="h3">Компания «ТехАтомСтрой» предлагает услуги на выполнение работ по:</h3>
         <div class="activities"> 
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Алмазная </span><span>резка</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Алмазная </span><span>резка</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Алмазная </span><span>резка</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Антикоррозионная </span><span>защита</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Антикоррозионная </span><span>защита</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Антикоррозионная </span><span>защита</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Огнезащитные </span><span>работы</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Огнезащитные </span><span>работы</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Огнезащитные </span><span>работы</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Гидроизоляция</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Гидроизоляция</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Гидроизоляция</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Кровельные </span><span>работы</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Кровельные </span><span>работы</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Кровельные </span><span>работы</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Полы, стяжки, футеровочные работы</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Полы, стяжки, футеровочные работы</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Полы, стяжки, футеровочные работы</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
-        </div>
-        <div class="activities__bottom">
               <div class="activities__item">
-                <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
-                <h4 class="h4 activities__title"><span>Теплоизоляция</span>
-                </h4>
-                <div class="text">
-                  <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                <div class="activities__mobile-main"><span>Теплоизоляция</span>
+                </div>
+                <div class="activities__group">
+                  <div class="activities__pic" style="background: url(./img/about__pic.webp) no-repeat center / cover"></div>
+                  <h4 class="h4 activities__title"><span>Теплоизоляция</span>
+                  </h4>
+                  <div class="text">
+                    <p>лидер в области использования технологии алмазного сверления и алмазной резки в Российской Федерации в сегменте реконструкции и строительства на объектах различного назначения. </p>
+                  </div>
                 </div>
               </div>
           <div class="activities__additional-block">
@@ -158,7 +189,7 @@
       </div>
     </main>
     <div class="footer">
-      <div class="footer__banner"><img src="./img/footer.webp" alt=""></div>
+      <div class="footer__banner" style="background: url(./img/footer.webp) no-repeat center / cover"></div>
       <div class="footer__wrap"><a class="anchor-arrow" href="#"><img src="./img/an-arrow.svg" alt=""></a>
         <div class="container">
           <div class="footer__top"> 

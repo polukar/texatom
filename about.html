@@ -30,7 +30,10 @@
     <div class="header"> 
       <div class="container header__wrap">
         <div class="haeder__left">
-          <div class="header__burger"></div><a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
+          <div class="header__burger"></div><a class="header__logo" href="#">
+            <picture> 
+              <source media="(max-width: 1200px)" srcset="./img/logo-mobile.svg"><img src="./img/logo.svg" alt="">
+            </picture></a>
         </div>
         <div class="header__right"> 
           <nav class="nav"><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></nav>
@@ -51,7 +54,9 @@
         </div>
       </div>
     </div>
-        <div class="mobile-nav"> <a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></div>
+        <div class="mobile-nav"> 
+          <div class="mobile-nav__close"> <img src="./img/close.svg" alt=""></div><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a>
+        </div>
     <main class="inner"> 
       <div class="container">
             <div class="scrumbs"> <a class="scrumbs__link" href="#">Главная  </a><a class="scrumbs__link" href="#">Пункт 2  </a><a class="scrumbs__link" href="#">Пункт 3  </a></div>
@@ -61,22 +66,23 @@
                 <div class="ico-block"><img src="./img/ico-text.svg" alt="">
                   <p class="ico-text">В сферу деятельности компании входит реализация проектов, связанных со строительством, реконструкцией, капитальным ремонтом объектов промышленного и гражданского строительства.</p>
                 </div>
+            <div class="about__pic --mobile"> <img src="../img/about__pic.webp" alt=""></div>
             <div class="text"> 
               <p>ООО «ТехАтомСтрой» – современная, динамично развивающаяся компания, работающая на российском строительном рынке. За время своего существования, приобретенный опыт проведения специальных строительно-монтажных работ позволяет нам успешно решать поставленные задачи на объектах любого объема и сложности.</p>
               <p>Главной стратегией нашей компании является постоянное совершенствование компетенций наших сотрудников, знание и профессионализм которых являются основным достоянием и опорой нашей Компании. Также огромную роль мы отводим контролю качества услуг, выполняемых нашими специалистами. Несмотря на достаточно молодой возраст компании, команда, работающая в ней, вместе уже более 15 лет.</p>
               <p>В сферу деятельности компании входит реализация проектов, связанных со строительством, реконструкцией, капитальным ремонтом объектов промышленного и гражданского строительства. Мы имеем огромный опыт реализации проектов на атомных станциях, гидротехнических сооружениях, металлургических комбинатах, предприятиях химической, лесной, машиностроительной промышленности.</p>
             </div>
           </div>
-          <div class="about__pic" style="background: url(../img/about__pic.webp) no-repeat center / cover"></div>
+          <div class="about__pic --desktop" style="background: url(../img/about__pic.webp) no-repeat center / cover"></div>
         </div>
-        <div class="about__video"> 
-          <div class="about__video-play"><a data-fancybox="video-gallery" href="https://youtu.be/SU4BqSh9jZQ">
+        <div class="about__video">
+          <div class="about__video-play" style="background: url(./img/video-banner.webp) no-repeat center / cover">
+             <a data-fancybox="video-gallery" href="https://youtu.be/SU4BqSh9jZQ">
             <div class="after">
                <svg width="70" height="81" viewBox="0 0 70 81" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.25 5.42597L64 40.5L3.25 75.574L3.25 5.42597Z"  stroke="white" stroke-width="6"/>
 </svg>
-            </div><img src="./img/video-banner.webp"/>
-</a>
+            </div></a>
           </div>
           <div class="about__video-description"> 
             <p><b>ООО «ТехАтомСтрой» </b> является членом Саморегулируемой Организации – Некоммерческого партнерства «Объединение организаций выполняющих строительство, реконструкцию, капитальный ремонт объектов атомной отрасли» «СОЮЗАТОМСТРОЙ» и осуществляет свою деятельность на основании действующих Свидетельств о допуске к работам, которые оказывают влияние на безопасность объектов капитального строительства: № СРО-С-016-00261/2-21012011, выданного на основании единогласного решения заседания Совета Некоммерческого партнерства «21» января 2011 года.</p>
@@ -85,7 +91,7 @@
       </div>
     </main>
     <div class="footer">
-      <div class="footer__banner"><img src="./img/footer.webp" alt=""></div>
+      <div class="footer__banner" style="background: url(./img/footer.webp) no-repeat center / cover"></div>
       <div class="footer__wrap"><a class="anchor-arrow" href="#"><img src="./img/an-arrow.svg" alt=""></a>
         <div class="container">
           <div class="footer__top"> 

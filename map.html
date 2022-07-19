@@ -30,7 +30,10 @@
     <div class="header"> 
       <div class="container header__wrap">
         <div class="haeder__left">
-          <div class="header__burger"></div><a class="header__logo" href="#"><img src="./img/logo.svg" alt=""></a>
+          <div class="header__burger"></div><a class="header__logo" href="#">
+            <picture> 
+              <source media="(max-width: 1200px)" srcset="./img/logo-mobile.svg"><img src="./img/logo.svg" alt="">
+            </picture></a>
         </div>
         <div class="header__right"> 
           <nav class="nav"><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></nav>
@@ -51,7 +54,9 @@
         </div>
       </div>
     </div>
-        <div class="mobile-nav"> <a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a></div>
+        <div class="mobile-nav"> 
+          <div class="mobile-nav__close"> <img src="./img/close.svg" alt=""></div><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Клиентам</a><a class="nav__link" href="#">Виды деятельности</a><a class="nav__link" href="#">Тендеры</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Контакты</a>
+        </div>
     <main class="inner"> 
       <div class="container">
             <div class="scrumbs"> <a class="scrumbs__link" href="#">Главная  </a><a class="scrumbs__link" href="#">Пункт 2  </a><a class="scrumbs__link" href="#">Пункт 3  </a></div>
@@ -64,7 +69,7 @@
               <div class="contact__address">Богатырский пр-кт, д.18, к.1, литер А, оф.409</div>
             </div>
             <div class="contacts__right">
-              <div class="contacts__phone">(812) 655-59-14  </div><a class="contacts__email link" href="mailto:mail@texatomstroy.ru">mailto:mail@texatomstroy.ru</a>
+              <div class="contacts__phone">(812) 655-59-14  </div><a class="contacts__email link" href="mailto:mail@texatomstroy.ru">mail@texatomstroy.ru</a>
             </div>
           </div>
           <div id="map"> </div>
@@ -96,7 +101,7 @@
       </form>
     </main>
     <div class="footer">
-      <div class="footer__banner"><img src="./img/footer.webp" alt=""></div>
+      <div class="footer__banner" style="background: url(./img/footer.webp) no-repeat center / cover"></div>
       <div class="footer__wrap"><a class="anchor-arrow" href="#"><img src="./img/an-arrow.svg" alt=""></a>
         <div class="container">
           <div class="footer__top"> 

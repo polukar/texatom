@@ -63,17 +63,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_forms__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_project_forms__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _project_video__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project/video */ "./src/js/project/video.js");
 /* harmony import */ var _project_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./project/slider */ "./src/js/project/slider.js");
-/* harmony import */ var _project_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project/map */ "./src/js/project/map.js");
-/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./project/tabs */ "./src/js/project/tabs.js");
-/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_project_tabs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _project_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project/header */ "./src/js/project/header.js");
+/* harmony import */ var _project_header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_project_header__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _project_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./project/map */ "./src/js/project/map.js");
+/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./project/tabs */ "./src/js/project/tabs.js");
+/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_project_tabs__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _project_accardeon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/accardeon */ "./src/js/project/accardeon.js");
+/* harmony import */ var _project_accardeon__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_project_accardeon__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
 
- // import "./project/header";
+
+
 
 
  // import "./project/anchor";
+
+/***/ }),
+
+/***/ "./src/js/project/accardeon.js":
+/*!*************************************!*\
+  !*** ./src/js/project/accardeon.js ***!
+  \*************************************/
+/***/ (function() {
+
+var accardeonItem = document.querySelectorAll('.activities__item');
+
+if (accardeonItem) {
+  accardeonItem.forEach(function (elem) {
+    var accardeonMain = elem.querySelector('.activities__mobile-main');
+    var accardeonGroup = elem.querySelector('.activities__group');
+    accardeonMain.addEventListener('click', function () {
+      if (!accardeonMain.classList.contains('-is-active')) {
+        accardeonMain.classList.add('-is-active');
+        accardeonGroup.classList.add('-is-active');
+      } else {
+        accardeonMain.classList.remove('-is-active');
+        accardeonGroup.classList.remove('-is-active');
+      }
+    });
+  });
+}
 
 /***/ }),
 
@@ -124,6 +155,41 @@ if (FORM) {
 
 /***/ }),
 
+/***/ "./src/js/project/header.js":
+/*!**********************************!*\
+  !*** ./src/js/project/header.js ***!
+  \**********************************/
+/***/ (function() {
+
+var header = document.querySelector('.header');
+
+if (header) {
+  var burger = header.querySelector('.header__burger');
+  var mibileMenu = document.querySelector('.mobile-nav');
+  var close = mibileMenu.querySelector('.mobile-nav__close ');
+  var links = mibileMenu.querySelectorAll('.nav__link');
+  burger.addEventListener('click', function () {
+    mibileMenu.classList.add('-is-active');
+  });
+  close.addEventListener('click', function () {
+    mibileMenu.classList.remove('-is-active');
+  });
+  links.forEach(function (elem) {
+    elem.addEventListener('click', function () {
+      mibileMenu.classList.remove('-is-active');
+    });
+  }); // document.addEventListener('scroll', () => {
+  //   const posTop = document.body.getBoundingClientRect().top;
+  //   if (-posTop > 200) {
+  //     header.classList.add('--scroll');
+  //   } else {
+  //     header.classList.remove('--scroll');
+  //   }
+  // })
+}
+
+/***/ }),
+
 /***/ "./src/js/project/map.js":
 /*!*******************************!*\
   !*** ./src/js/project/map.js ***!
@@ -153,6 +219,48 @@ if (MAP) {
       myMap.geoObjects.add(myPlacemark);
     });
   };
+} // map points
+
+
+var mapMarkers = document.querySelector('.map');
+
+if (mapMarkers) {
+  var mapPic = mapMarkers.querySelector('.map__pic');
+  var next = mapMarkers.querySelector('.next');
+  var prev = mapMarkers.querySelector('.prev');
+  var pointsContainer = mapMarkers.querySelector('.pointsContainer');
+  next.addEventListener('click', function () {
+    mapPic.classList.add('-is-active');
+  });
+  prev.addEventListener('click', function () {
+    mapPic.classList.remove('-is-active');
+  });
+  var mapPoints = document.querySelectorAll('.map-point');
+
+  if (mapPoints) {
+    var elemUpdate = function elemUpdate() {
+      mapPoints = document.querySelectorAll('.map-point');
+      setTimeout(function () {
+        elemInit();
+      }, 100);
+    };
+
+    var elemInit = function elemInit() {
+      mapPoints.forEach(function (elem) {
+        var rectPoint = elem.querySelector('rect');
+        rectPoint.addEventListener('click', function () {
+          var pointActive = document.querySelector('.map-point.active');
+          if (pointActive) pointActive.classList.remove('active');
+          var newPoint = "<g class=\"map-point active\">".concat(elem.innerHTML, "</g>");
+          elem.remove();
+          pointsContainer.innerHTML = pointsContainer.innerHTML + newPoint;
+          elemUpdate();
+        });
+      });
+    };
+
+    elemInit();
+  }
 }
 
 /***/ }),
@@ -265,12 +373,14 @@ if (mainActivitesSlider) {
   var mainActivitesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.main-activites__slider', {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
     loop: false,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 35,
     on: {
       slideChange: function slideChange() {
         var index_currentSlide = mainActivitesSwiper.realIndex;
+        var aaaa = mainActivitesSwiper.activeIndex;
+        console.log(aaaa);
 
         if (_sliderNumberActive) {
           _sliderNumberActive.innerHTML = "";
@@ -283,6 +393,16 @@ if (mainActivitesSlider) {
           _sliderNumberAll.innerHTML = "";
           _sliderNumberAll.innerHTML = " / ".concat(allSlides.length / 3);
         }
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3
+      },
+      500: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
       }
     }
   });
